@@ -1,15 +1,16 @@
 // =============================================
-//  ZRIX SCRIPTS — APP LOGIC v2
+//  Kuwerty SCRIPTS — APP LOGIC v2
 // =============================================
 
 // ---- Admin Password (SHA-256 hash of your password) ----
-// รหัสผ่านตั้งต้น: zrix1234
-// ถ้าอยากเปลี่ยนรหัส → รัน: python -c "import hashlib; print(hashlib.sha256(b'รหัสใหม่').hexdigest())"
-// แล้วแทนค่า ADMIN_HASH ด้านล่างนี้
-const ADMIN_HASH = '23a2cac65f6fa260b4d388e0168ee2aea237b8d5f752c1e4bad6350ba304e8fa';
+// รหัสผ่าน: kuwerty1234 (หรือ zrix1234)
+const ADMIN_HASHES = [
+  'fd9d4b3f655915da384f7b9cd8d72775f6ee5ba4a6b2c2bc453f7612a22a6f92', // kuwerty1234
+  '23a2cac65f6fa260b4d388e0168ee2aea237b8d5f752c1e4bad6350ba304e8fa'  // zrix1234
+];
 
 // ---- Storage key ----
-const STORAGE_KEY = 'zrix_scripts_v1';
+const STORAGE_KEY = 'kuwerty_scripts_v1';
 
 // ---- Save / Load helpers ----
 function saveScripts() {
@@ -322,7 +323,7 @@ pwForm.addEventListener('submit', async e => {
   const entered = pwInput.value;
   const hash = await sha256(entered);
 
-  if (hash === ADMIN_HASH) {
+  if (ADMIN_HASHES.includes(hash)) {
     failCount = 0;
     closePwModal();
     enableAdminMode();

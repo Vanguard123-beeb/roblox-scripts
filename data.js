@@ -1,5 +1,5 @@
 // =============================================
-//  ZRIX SCRIPTS — DATA STORE
+//  Kuwerty SCRIPTS — DATA STORE
 //  แก้ไขข้อมูล script ของคุณที่นี่ได้เลย
 // =============================================
 
@@ -14,7 +14,7 @@ const SCRIPTS_DATA = [
     features: ["Player ESP", "Box ESP", "Distance ESP", "Aimbot", "FOV Circle", "Smooth Aim"],
     image: "",   // ใส่ URL รูปภาพ thumbnail
     video: "",   // ใส่ YouTube embed URL เช่น https://www.youtube.com/embed/XXXXXXXX
-    script: `-- ZRIX Universal ESP & Aimbot
+    script: `-- Kuwerty Universal ESP & Aimbot
 -- Works on most Roblox games
 -- Updated: 2024
 
@@ -39,7 +39,7 @@ local CONFIG = {
     }
 }
 
-print("[ZRIX] Universal Script Loaded!")
+print("[Kuwerty] Universal Script Loaded!")
 -- Script continues...`
   },
   {
@@ -52,12 +52,12 @@ print("[ZRIX] Universal Script Loaded!")
     features: ["Auto Farm EXP", "Auto Collect Fruits", "Boss Farm", "Mastery Farm", "Devil Fruit Sniper", "Auto Quest"],
     image: "",
     video: "",
-    script: `-- ZRIX Blox Fruits Script
+    script: `-- Kuwerty Blox Fruits Script
 -- Version: 3.2 | Updated: 2024
 -- Works with Synapse X, Fluxus, Arceus X
 
 local GUI = Instance.new("ScreenGui")
-GUI.Name = "ZRIX_BloxFruits"
+GUI.Name = "Kuwerty_BloxFruits"
 GUI.Parent = game.CoreGui
 GUI.ResetOnSpawn = false
 
@@ -74,7 +74,7 @@ local function AutoFarm(mob)
     end
 end
 
-print("[ZRIX] Blox Fruits Script Loaded!")`
+print("[Kuwerty] Blox Fruits Script Loaded!")`
   },
   {
     id: 3,
@@ -86,7 +86,7 @@ print("[ZRIX] Blox Fruits Script Loaded!")`
     features: ["Murderer ESP", "Sheriff ESP", "Knife Trajectory", "Auto Dodge", "Coin Farm", "Role Reveal"],
     image: "",
     video: "",
-    script: `-- ZRIX MM2 Script
+    script: `-- Kuwerty MM2 Script
 -- Murder Mystery 2 Helper
 -- v1.8 | Fully Undetected
 
@@ -116,7 +116,7 @@ local function ESP_Loop()
 end
 
 task.spawn(ESP_Loop)
-print("[ZRIX] MM2 Script Active!")`
+print("[Kuwerty] MM2 Script Active!")`
   },
   {
     id: 4,
@@ -128,7 +128,7 @@ print("[ZRIX] MM2 Script Active!")`
     features: ["Speed Hack", "Fly Mode", "Noclip", "Infinite Jump", "Anti-Gravity", "Teleport to Player"],
     image: "",
     video: "",
-    script: `-- ZRIX Utility Script
+    script: `-- Kuwerty Utility Script
 -- Speed / Fly / Noclip / Infinite Jump
 -- Compatible with all executors
 
@@ -153,10 +153,10 @@ UIS.InputBegan:Connect(function(input)
     if input.KeyCode == Enum.KeyCode.F then
         flying = not flying
         -- Fly logic
-        print("[ZRIX] Fly:", flying)
+        print("[Kuwerty] Fly:", flying)
     end
 end)
 
-print("[ZRIX] Utility Script Loaded!")`
+print("[Kuwerty] Utility Script Loaded!")`
   }
 ];
