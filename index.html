@@ -18,8 +18,8 @@
         <span class="logo-bracket">[</span>Kuwerty<span class="logo-accent">_SCRIPTS</span><span class="logo-bracket">]</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#scripts">Scripts</a></li>
-        <li><a href="#about">เกี่ยวกับ</a></li>
+        <li><a href="#scripts">ผลงาน</a></li>
+        <li><a href="#about">การทดสอบ</a></li>
         <li><a href="#add-script" class="nav-cta">+ เพิ่ม Script</a></li>
         <li><button id="admin-toggle" class="nav-admin">🔧 Admin Mode</button></li>
       </ul>
@@ -30,20 +30,20 @@
   <header class="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-inner">
-      <div class="hero-tag">Roblox Exploit Hub</div>
+      <div class="hero-tag">Developer Showcase</div>
       <h1 class="hero-title">
-        Script ที่ผมทำ<br />
-        <span class="hero-title-accent">ใช้ได้จริง ฟรีทุกตัว</span>
+        รวบรวมผลงานการพัฒนา<br />
+        <span class="hero-title-accent">Roblox Scripts & Systems</span>
       </h1>
-      <p class="hero-desc">รวม exploit script คุณภาพสำหรับ Roblox — ก็อปไปรันได้เลย ไม่มีขั้นตอนซับซ้อน</p>
+      <p class="hero-desc">พื้นที่จัดแสดงโปรเจกต์และสคริปต์ที่ผมพัฒนาขึ้นสำหรับเกมต่างๆ บน Roblox เน้นประสิทธิภาพ ความเสถียร และฟังก์ชันที่ตอบโจทย์</p>
       <div class="hero-actions">
-        <a href="#scripts" class="btn-primary">ดู Scripts ทั้งหมด</a>
-        <a href="#about" class="btn-ghost">วิธีใช้งาน</a>
+        <a href="#scripts" class="btn-primary">สำรวจผลงาน</a>
+        <a href="#about" class="btn-ghost">ขั้นตอนทดสอบ</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num" id="stat-scripts">0</span>
-          <span class="stat-label">Scripts</span>
+          <span class="stat-label">Projects</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
@@ -52,8 +52,8 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num" id="stat-free">100%</span>
-          <span class="stat-label">ฟรี</span>
+          <span class="stat-num" id="stat-free">Lua</span>
+          <span class="stat-label">Language</span>
         </div>
       </div>
     </div>
@@ -78,32 +78,32 @@ ScriptHub.<span class="c-fn">load</span>(<span class="c-str">"main"</span>)<span
     </div>
   </header>
 
-  <!-- HOW TO USE -->
+  <!-- HOW TO TEST -->
   <section class="howto" id="about">
     <div class="container">
-      <h2 class="section-title">วิธีใช้งาน</h2>
+      <h2 class="section-title">ขั้นตอนการทดสอบสคริปต์</h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
-            <h3>เปิด Executor</h3>
-            <p>เปิด executor ที่คุณใช้อยู่ เช่น Synapse X, Fluxus, หรือ Arceus X</p>
+            <h3>เตรียม Executor</h3>
+            <p>เปิดโปรแกรม executor ที่ต้องการใช้งาน เช่น Synapse X, Fluxus, หรือ Arceus X</p>
           </div>
         </div>
         <div class="step-arrow">→</div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
-            <h3>ก็อป Script</h3>
-            <p>กดปุ่ม <strong>Copy Script</strong> ใต้ script ที่ต้องการแล้ว paste ลง executor</p>
+            <h3>คัดลอกโค้ด</h3>
+            <p>กดปุ่ม <strong>Copy Script</strong> จากการ์ดผลงานด้านล่างเพื่อนำโค้ดไปวาง</p>
           </div>
         </div>
         <div class="step-arrow">→</div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
-            <h3>Execute & Enjoy</h3>
-            <p>กด Execute แล้วใช้งาน feature ต่างๆ ได้เลย</p>
+            <h3>ทดสอบการทำงาน</h3>
+            <p>กด Execute ภายในเกมเพื่อตรวจสอบการทำงานและฟีเจอร์ต่างๆ</p>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ ScriptHub.<span class="c-fn">load</span>(<span class="c-str">"main"</span>)<span
   <section class="scripts-section" id="scripts">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Script ทั้งหมด</h2>
+        <h2 class="section-title">รายการผลงาน (Showcase)</h2>
         <div class="filter-row">
           <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
           <button class="filter-btn" data-filter="universal">Universal</button>
