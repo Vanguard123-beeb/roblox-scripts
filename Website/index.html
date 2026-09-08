@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZRIX Scripts — Roblox Exploit Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-bracket">[</span>ZRIX<span class="logo-accent">_SCRIPTS</span><span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#scripts">Scripts</a></li>
+        <li><a href="#about">เกี่ยวกับ</a></li>
+        <li><a href="#add-script" class="nav-cta">+ เพิ่ม Script</a></li>
+        <li><button id="admin-toggle" class="nav-admin">🔧 Admin Mode</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-tag">Roblox Exploit Hub</div>
+      <h1 class="hero-title">
+        Script ที่ผมทำ<br />
+        <span class="hero-title-accent">ใช้ได้จริง ฟรีทุกตัว</span>
+      </h1>
+      <p class="hero-desc">รวม exploit script คุณภาพสำหรับ Roblox — ก็อปไปรันได้เลย ไม่มีขั้นตอนซับซ้อน</p>
+      <div class="hero-actions">
+        <a href="#scripts" class="btn-primary">ดู Scripts ทั้งหมด</a>
+        <a href="#about" class="btn-ghost">วิธีใช้งาน</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="stat-scripts">0</span>
+          <span class="stat-label">Scripts</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" id="stat-games">0</span>
+          <span class="stat-label">Games</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" id="stat-free">100%</span>
+          <span class="stat-label">ฟรี</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">executor.lua</span>
+      </div>
+      <pre class="terminal-code"><span class="c-comment">-- ZRIX Script Hub</span>
+<span class="c-keyword">local</span> ScriptHub = {}
+
+<span class="c-keyword">function</span> ScriptHub.<span class="c-fn">load</span>(scriptName)
+  <span class="c-keyword">local</span> url = <span class="c-str">"https://zrix.scripts/"</span>
+  <span class="c-fn">loadstring</span>(game:GetService(
+    <span class="c-str">"HttpService"</span>
+  ):<span class="c-fn">GetAsync</span>(url .. scriptName))()
+<span class="c-keyword">end</span>
+
+ScriptHub.<span class="c-fn">load</span>(<span class="c-str">"main"</span>)<span class="c-cursor">|</span></pre>
+    </div>
+  </header>
+
+  <!-- HOW TO USE -->
+  <section class="howto" id="about">
+    <div class="container">
+      <h2 class="section-title">วิธีใช้งาน</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>เปิด Executor</h3>
+            <p>เปิด executor ที่คุณใช้อยู่ เช่น Synapse X, Fluxus, หรือ Arceus X</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>ก็อป Script</h3>
+            <p>กดปุ่ม <strong>Copy Script</strong> ใต้ script ที่ต้องการแล้ว paste ลง executor</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Execute & Enjoy</h3>
+            <p>กด Execute แล้วใช้งาน feature ต่างๆ ได้เลย</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTS SECTION -->
+  <section class="scripts-section" id="scripts">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Script ทั้งหมด</h2>
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+          <button class="filter-btn" data-filter="universal">Universal</button>
+          <button class="filter-btn" data-filter="game-specific">Game Specific</button>
+          <button class="filter-btn" data-filter="utility">Utility</button>
+        </div>
+      </div>
+
+      <!-- SCRIPT CARDS GRID -->
+      <div class="scripts-grid" id="scripts-grid">
+        <!-- Cards injected by JS from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ADD SCRIPT FORM -->
+  <section class="add-section" id="add-script">
+    <div class="container">
+      <h2 class="section-title" id="form-title">เพิ่ม Script ใหม่</h2>
+      <p class="add-desc">กรอกข้อมูล script ที่คุณต้องการเพิ่มลงในหน้านี้</p>
+      <form class="script-form" id="script-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-name">ชื่อ Script</label>
+            <input type="text" id="f-name" placeholder="เช่น Blox Fruits Auto Farm" required />
+          </div>
+          <div class="form-group">
+            <label for="f-game">เกม</label>
+            <input type="text" id="f-game" placeholder="เช่น Blox Fruits" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-tag">หมวดหมู่</label>
+            <select id="f-tag">
+              <option value="universal">Universal</option>
+              <option value="game-specific">Game Specific</option>
+              <option value="utility">Utility</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-status">สถานะ</label>
+            <select id="f-status">
+              <option value="working">✅ Working</option>
+              <option value="patched">❌ Patched</option>
+              <option value="testing">🔄 Testing</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="f-desc">คำอธิบาย</label>
+          <textarea id="f-desc" placeholder="อธิบาย feature ต่างๆ ของ script นี้..." rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="f-features">Feature (แต่ละบรรทัดคือ 1 feature)</label>
+          <textarea id="f-features" placeholder="Auto Farm&#10;Auto Collect&#10;ESP&#10;Speed Hack" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="f-script">Script Code</label>
+          <textarea id="f-script" class="code-textarea" placeholder="-- วาง Lua script ของคุณที่นี่" rows="8" spellcheck="false"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-image">URL รูปภาพ (thumbnail)</label>
+            <input type="url" id="f-image" placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label for="f-video">URL วิดีโอ YouTube (optional)</label>
+            <input type="url" id="f-video" placeholder="https://youtube.com/embed/..." />
+          </div>
+        </div>
+        <button type="submit" id="form-submit-btn" class="btn-primary btn-full">➕ เพิ่ม Script</button>
+        <button type="button" id="form-cancel-btn" class="btn-ghost btn-full" style="display:none;margin-top:8px;">✕ ยกเลิกการแก้ไข</button>
+      </form>
+      <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border);">
+        <p style="font-size:.78rem;color:var(--muted);margin-bottom:10px;">⚠️ Danger Zone</p>
+        <button id="reset-defaults-btn" class="btn-reset-danger">🔄 รีเซ็ตกลับเป็น Default Scripts</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo"><span class="logo-bracket">[</span>ZRIX<span class="logo-accent">_SCRIPTS</span><span class="logo-bracket">]</span></span>
+      <p class="footer-note">สร้างขึ้นเพื่อการศึกษา — ใช้ด้วยความรับผิดชอบ</p>
+    </div>
+  </footer>
+
+  <!-- PASSWORD MODAL -->
+  <div class="pw-overlay" id="pw-overlay">
+    <div class="pw-box">
+      <div class="pw-icon">🔐</div>
+      <h3 class="pw-title">Admin Access</h3>
+      <p class="pw-sub">ใส่รหัสผ่านเพื่อเข้าโหมดเจ้าของ</p>
+      <form id="pw-form" autocomplete="off">
+        <div class="pw-input-wrap">
+          <input type="password" id="pw-input" placeholder="รหัสผ่าน" autocomplete="new-password" />
+          <button type="button" id="pw-eye" class="pw-eye" title="แสดง/ซ่อน">👁</button>
+        </div>
+        <p class="pw-error" id="pw-error"></p>
+        <button type="submit" class="btn-primary btn-full pw-submit">ยืนยัน</button>
+        <button type="button" class="btn-ghost btn-full pw-cancel" id="pw-cancel" style="margin-top:8px;">ยกเลิก</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPT MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">✓ คัดลอก Script แล้ว!</div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
